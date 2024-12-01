@@ -1,143 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Algorithm Concepts and Applications</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Guide to Algorithm Design and Concepts</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <h1>Algorithm Concepts and Applications</h1>
-  </header>
-  
-  <main class="content">
-    <!-- Question 1 -->
-    <section class="question">
-      <h2>1. What are the kinds of problems we see in nature?</h2>
-      <p><strong>Iteration:</strong> Compound interest, traffic lights.</p>
-      <p><strong>Recursion:</strong> Directory size, fractals.</p>
-      <p><strong>Backtracking:</strong> Sudoku, maze-solving.</p>
-      <p><strong>Divide and Conquer:</strong> Merging records, sorting.</p>
-      <p><strong>Greedy Algorithm:</strong> ATM withdrawals, activity scheduling.</p>
-      <p><strong>Dynamic Programming:</strong> Route planning, Fibonacci sequence.</p>
-      <p><strong>Graph Algorithms:</strong> Dijkstra (shortest path), Prim’s/Kruskal’s (MST).</p>
-      <p><strong>Sorting Algorithms:</strong> Task and ticket sorting.</p>
-      <p><strong>Searching Algorithms:</strong> Linear and binary search.</p>
-    </section>
+    <div class="container">
+        <header>
+            <h1>Comprehensive Guide to Algorithm Design and Concepts</h1>
+        </header>
 
-    <!-- Question 2 -->
-    <section class="question">
-      <h2>2. What is space and time efficiency? Why are they important?</h2>
-      <p><strong>Space Efficiency:</strong> Extra memory used by an algorithm.</p>
-      <p><strong>Time Efficiency:</strong> Speed of task completion.</p>
-      <h3>Orders of Growth:</h3>
-      <ul>
-        <li>O(1): Array access.</li>
-        <li>O(log n): Binary search.</li>
-        <li>O(n): Loop through a list.</li>
-        <li>O(n log n): Merge sort.</li>
-        <li>O(n²): Bubble sort.</li>
-        <li>O(2^n): Brute force.</li>
-        <li>O(n!): Generating permutations.</li>
-      </ul>
-    </section>
+        <section id="problem-types">
+            <h2>1. Kinds of Problems in Nature</h2>
+            <div class="subsection">
+                <h3>Iteration</h3>
+                <ul>
+                    <li>Compound Interest: Keeps adding interest over time</li>
+                    <li>Traffic Lights: Switches between red, yellow, and green</li>
+                </ul>
 
-    <!-- Question 3 -->
-    <section class="question">
-      <h2>3. Takeaways from Chapter 2 Design Principles</h2>
-      <ul>
-        <li><strong>Shortest Path Trees:</strong> Essential for navigation and optimization.</li>
-        <li><strong>Partitioning:</strong> Simplifies problems for efficient solutions.</li>
-        <li><strong>Balancing and Rotations:</strong> Keeps data structures efficient.</li>
-        <li><strong>Edge Relaxation:</strong> Dynamically updates shortest paths.</li>
-        <li><strong>Level Order Traversal:</strong> Breadth-first exploration.</li>
-        <li><strong>Pruning:</strong> Reduces computational complexity.</li>
-        <li><strong>Brave and Cautious Travel:</strong> Combines DFS (brave) and BFS (cautious).</li>
-      </ul>
-    </section>
+                <h3>Recursion</h3>
+                <ul>
+                    <li>Directory Size: Adds up folder sizes, including subfolders</li>
+                    <li>Fractals: Patterns repeat in smaller versions</li>
+                </ul>
 
-    <!-- Question 4 -->
-    <section class="question">
-      <h2>4. Hierarchical data and optimization in tree structures</h2>
-      <ul>
-        <li><strong>Tree:</strong> Simple hierarchical structure; inefficient if unbalanced.</li>
-        <li><strong>Binary Search Tree (BST):</strong> Efficient search/retrieval, but degrades when unbalanced.</li>
-        <li><strong>AVL Tree:</strong> Guarantees balance; costly rotations.</li>
-        <li><strong>2-3 Tree:</strong> Perfect balance; complex implementation.</li>
-        <li><strong>Red-Black Tree:</strong> Approximate balance with fewer rotations than AVL.</li>
-        <li><strong>Heap:</strong> Quick access to min/max values; inefficient for general searches.</li>
-        <li><strong>Trie:</strong> Efficient string and prefix searches; high memory use.</li>
-      </ul>
-    </section>
+                <h3>Backtracking</h3>
+                <ul>
+                    <li>Sudoku: Fills in numbers and fixes mistakes</li>
+                    <li>Maze: Tries a path, goes back if stuck</li>
+                </ul>
 
-    <!-- Question 5 -->
-    <section class="question">
-      <h2>5. Array query algorithms and their applications</h2>
-      <ul>
-        <li><strong>Range Queries:</strong> Efficient sum/min/max lookups.</li>
-        <li><strong>Dynamic Updates:</strong> Real-time changes using Fenwick Trees.</li>
-        <li><strong>Prefix Queries:</strong> Cumulative sums.</li>
-        <li><strong>Static Queries:</strong> Sparse Tables for min/max.</li>
-        <li><strong>Searches:</strong> Binary search for sorted arrays.</li>
-      </ul>
-    </section>
+                <h3>Other Problem Types</h3>
+                <ul>
+                    <li><strong>Divide and Conquer:</strong> Merging Records, Merge Sort</li>
+                    <li><strong>Greedy Algorithm:</strong> ATM Withdrawal, Activity Scheduling</li>
+                    <li><strong>Dynamic Programming:</strong> Route Planning, Fibonacci</li>
+                    <li><strong>Graph Algorithms:</strong> Dijkstra, Prim's/Kruskal's</li>
+                    <li><strong>Sorting Algorithms:</strong> Task and Ticket Sorting</li>
+                    <li><strong>Searching Algorithms:</strong> Linear and Binary Search</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Question 6 -->
-    <section class="question">
-      <h2>6. Tree vs. Graph and their applications</h2>
-      <h3>Tree</h3>
-      <ul>
-        <li><strong>Definition:</strong> Hierarchical with parent-child relationships.</li>
-        <li><strong>Applications:</strong> File systems, decision trees, database indexes.</li>
-      </ul>
-      <h3>Graph</h3>
-      <ul>
-        <li><strong>Definition:</strong> General node-edge structure.</li>
-        <li><strong>Applications:</strong> Social networks, GPS, recommendation systems.</li>
-      </ul>
-    </section>
+        <section id="space-time-efficiency">
+            <h2>2. Space and Time Efficiency</h2>
+            <div class="subsection">
+                <h3>Definitions</h3>
+                <ul>
+                    <li><strong>Space Efficiency:</strong> Extra memory an algorithm uses</li>
+                    <li><strong>Time Efficiency:</strong> Speed at which an algorithm completes its task</li>
+                </ul>
 
-    <!-- Question 7 -->
-    <section class="question">
-      <h2>7. Sorting and Searching Algorithms</h2>
-      <h3>Sorting</h3>
-      <ul>
-        <li><strong>Bubble Sort:</strong> Swaps adjacent elements until sorted (O(n²)).</li>
-        <li><strong>Merge Sort:</strong> Divides and merges sublists (O(n log n)).</li>
-        <li><strong>Quick Sort:</strong> Partitions around a pivot (O(n log n)).</li>
-      </ul>
-      <h3>Searching</h3>
-      <ul>
-        <li><strong>Linear Search:</strong> Checks each element (O(n)).</li>
-        <li><strong>Binary Search:</strong> Divides sorted data (O(log n)).</li>
-      </ul>
-    </section>
+                <h3>Orders of Growth</h3>
+                <table>
+                    <tr><th>Complexity</th><th>Time Example</th><th>Space Example</th></tr>
+                    <tr><td>O(1)</td><td>Array access</td><td>Single variable</td></tr>
+                    <tr><td>O(log n)</td><td>Binary search</td><td>Recursive stack</td></tr>
+                    <tr><td>O(n)</td><td>Loop through list</td><td>Storing list</td></tr>
+                    <tr><td>O(n log n)</td><td>Merge Sort</td><td>Auxiliary space</td></tr>
+                    <tr><td>O(n²)</td><td>Bubble Sort</td><td>2D matrix</td></tr>
+                    <tr><td>O(2^n)</td><td>Brute force</td><td>Storing subsets</td></tr>
+                    <tr><td>O(n!)</td><td>Generating permutations</td><td>Storing permutations</td></tr>
+                </table>
 
-    <!-- Question 8 -->
-    <section class="question">
-      <h2>8. Importance of Graph Algorithms</h2>
-      <ul>
-        <li><strong>Spanning Trees:</strong> Connect nodes efficiently (e.g., Kruskal’s, Prim’s).</li>
-        <li><strong>Shortest Paths:</strong> Optimizes routes (e.g., Dijkstra, Bellman-Ford).</li>
-      </ul>
-    </section>
+                <h3>Why It Matters</h3>
+                <ul>
+                    <li>Optimized Performance: Faster processing</li>
+                    <li>Efficient Memory Use: Saves memory</li>
+                    <li>Scalability: Handles larger data sets</li>
+                    <li>Real-World Impact: Improves system reliability</li>
+                    <li>Resource Constraints: Smooth operation on devices with limited memory</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Question 9 -->
-    <section class="question">
-      <h2>9. Algorithm Design Techniques</h2>
-      <ul>
-        <li><strong>Pruning:</strong> Reduces unnecessary computations.</li>
-        <li><strong>Lazy Propagation:</strong> Delays updates until needed.</li>
-        <li><strong>Edge Relaxation:</strong> Updates shortest paths dynamically.</li>
-        <li><strong>Balancing:</strong> Maintains efficiency in data structures.</li>
-        <li><strong>Brave and Cautious Travel:</strong> Combines DFS and BFS strategies.</li>
-      </ul>
-    </section>
-  </main>
+        <section id="design-principles">
+            <h2>3. Design Principles from Chapter 2</h2>
+            <div class="subsection">
+                <ul>
+                    <li><strong>Shortest Path Trees:</strong> 
+                        <ul>
+                            <li>Fundamental technique for finding most efficient routes</li>
+                            <li>Essential for optimization and navigation challenges</li>
+                            <li>Practical application in real-world systems like GPS routing</li>
+                        </ul>
+                    </li>
+                    <li><strong>Partitioning:</strong> 
+                        <ul>
+                            <li>Breaks down complex problems into smaller, manageable segments</li>
+                            <li>Reduces algorithmic complexity</li>
+                            <li>Enables more efficient problem-solving approaches</li>
+                        </ul>
+                    </li>
+                    <li><strong>Balancing and Rotations:</strong> 
+                        <ul>
+                            <li>Maintains optimal performance of data structures</li>
+                            <li>Prevents performance degradation in search and update operations</li>
+                            <li>Implemented in self-balancing tree structures like AVL and Red-Black trees</li>
+                        </ul>
+                    </li>
+                    <li><strong>Edge Relaxation:</strong> 
+                        <ul>
+                            <li>Allows dynamic updating of path solutions</li>
+                            <li>Enables real-time adaptation to new information</li>
+                            <li>Critical mechanism in pathfinding algorithms like Dijkstra's</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-  <footer class="footer">
-    <p>&copy; 2024 Algorithm Study Guide</p>
-  </footer>
+        <section id="hierarchical-data">
+            <h2>4. Hierarchical Data Structures</h2>
+            <div class="subsection">
+                <h3>Types of Trees</h3>
+                <table>
+                    <tr>
+                        <th>Data Structure</th>
+                        <th>Use Case</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                    <tr>
+                        <td>Basic Tree</td>
+                        <td>Representing hierarchies</td>
+                        <td>Simple and intuitive</td>
+                        <td>Lacks balance; inefficient operations</td>
+                    </tr>
+                    <tr>
+                        <td>Binary Search Tree (BST)</td>
+                        <td>Sorted data storage</td>
+                        <td>Efficient when balanced</td>
+                        <td>Degrades to O(n) if unbalanced</td>
+                    </tr>
+                    <tr>
+                        <td>AVL Tree</td>
+                        <td>Maintaining balance</td>
+                        <td>Always balanced</td>
+                        <td>Costly rotations during updates</td>
+                    </tr>
+                    <tr>
+                        <td>Red-Black Tree</td>
+                        <td>Dynamic operations</td>
+                        <td>Predictable O(log n)</td>
+                        <td>Slightly slower lookups</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="array-query-algorithms">
+            <h2>5. Array Query Algorithms</h2>
+            <div class="subsection">
+                <h3>Why Needed</h3>
+                <ul>
+                    <li>Efficient Data Access</li>
+                    <li>Optimized Operations</li>
+                    <li>Dynamic Applications</li>
+                    <li>Memory Efficiency</li>
+                </ul>
+
+                <h3>Applications</h3>
+                <ul>
+                    <li>Range Queries: Sum/Min in a range</li>
+                    <li>Dynamic Updates: Real-time changes</li>
+                    <li>Prefix Queries: Cumulative sums</li>
+                    <li>Static Queries: Min/Max lookups</li>
+                    <li>Searches: Finding elements</li>
+                    <li>Pattern Matching: Subarray searches</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="trees-vs-graphs">
+            <h2>6. Trees vs. Graphs</h2>
+            <div class="subsection">
+                <h3>Tree Characteristics</h3>
+                <ul>
+                    <li>Hierarchical structure</li>
+                    <li>One root node</li>
+                    <li>Acyclic</li>
+                    <li>Directed connections</li>
+                </ul>
+
+                <h3>Graph Characteristics</h3>
+                <ul>
+                    <li>Network of connected nodes</li>
+                    <li>Can be cyclic</li>
+                    <li>Can be disconnected</li>
+                    <li>Directed or undirected</li>
+                </ul>
+
+                <h3>Traversal Methods</h3>
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Tree Traversal</th>
+                        <th>Graph Traversal</th>
+                    </tr>
+                    <tr>
+                        <td>Depth-First</td>
+                        <td>Pre-order, In-order, Post-order</td>
+                        <td>Explore as far as possible along each branch</td>
+                    </tr>
+                    <tr>
+                        <td>Breadth-First</td>
+                        <td>Level-order</td>
+                        <td>Explore all neighbors at current depth</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="sorting-searching">
+            <h2>7. Sorting and Searching Algorithms</h2>
+            <div class="subsection">
+                <h3>Sorting Algorithms</h3>
+                <table>
+                    <tr><th>Algorithm</th><th>Complexity</th><th>Best Use</th></tr>
+                    <tr><td>Bubble Sort</td><td>O(n²)</td><td>Small datasets</td></tr>
+                    <tr><td>Insertion Sort</td><td>O(n²)</td><td>Nearly sorted data</td></tr>
+                    <tr><td>Merge Sort</td><td>O(n log n)</td><td>Large-scale data</td></tr>
+                    <tr><td>Quick Sort</td><td>O(n log n) avg</td><td>General-purpose</td></tr>
+                    <tr><td>Heap Sort</td><td>O(n log n)</td><td>Priority management</td></tr>
+                </table>
+
+                <h3>Searching Algorithms</h3>
+                <table>
+                    <tr><th>Algorithm</th><th>Complexity</th><th>Best Use</th></tr>
+                    <tr><td>Linear Search</td><td>O(n)</td><td>Small/unsorted datasets</td></tr>
+                    <tr><td>Binary Search</td><td>O(log n)</td><td>Sorted data</td></tr>
+                    <tr><td>Hashing</td><td>O(1) avg</td><td>Databases and caches</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="graph-algorithms">
+            <h2>8. Graph Algorithms: Spanning Trees and Shortest Paths</h2>
+            <div class="subsection">
+                <h3>Spanning Trees</h3>
+                <ul>
+                    <li>Connects all nodes with fewest edges</li>
+                    <li>Minimum Spanning Tree (MST) minimizes total edge weight</li>
+                    <li>Key Algorithms: Kruskal's, Prim's</li>
+                </ul>
+
+                <h3>Applications</h3>
+                <ul>
+                    <li>Network Design</li>
+                    <li>Cluster Analysis</li>
+                    <li>Circuit Design</li>
+                </ul>
+
+                <h3>Shortest Path Algorithms</h3>
+                <ul>
+                    <li>Dijkstra's: Non-negative weights</li>
+                    <li>Bellman-Ford: Handles negative weights</li>
+                    <li>A* Algorithm: Improves with heuristics</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="algorithm-design-techniques">
+            <h2>9. Algorithm Design Techniques</h2>
+            <div class="subsection">
+                <ul>
+                    <li><strong>Brave and Cautious Travel:</strong> 
+                        <ul>
+                            <li>Combines exploration (DFS) and safety (BFS)</li>
+                            <li>Used in maze solving and graph navigation</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pruning:</strong> 
+                        <ul>
+                            <li>Cuts unnecessary parts of solution space</li>
+                            <li>Saves computational time</li>
+                        </ul>
+                    </li>
+                    <li><strong>Lazy Propagation:</strong> 
+                        <ul>
+                            <li>Delays updates until necessary</li>
+                            <li>Improves efficiency in range queries</li>
+                        </ul>
+                    </li>
+                    <li><strong>Level Order Traversal:</strong> 
+                        <ul>
+                            <li>Visits tree nodes level by level</li>
+                            <li>Useful in hierarchical exploration</li>
+                        </ul>
+                    </li>
+                    <li><strong>Edge Relaxation:</strong> 
+                        <ul>
+                            <li>Gradually updates shortest paths</li>
+                            <li>Critical in network routing</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
