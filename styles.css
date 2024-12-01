@@ -1,0 +1,82 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #e3f2fd, #90caf9);
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, #42a5f5, #2196f3);
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #e3f2fd;
+}
+
+/* Main section styles */
+main {
+    max-width: 800px;
+    margin: auto;
+    background: #f9fbe7; /* Light green background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dcedc8; /* Green border */
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+main h2 {
+    color: #388e3c; /* Dark green */
+    border-bottom: 2px solid #66bb6a; /* Light green */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #4e342e; /* Dark brown */
+    background: #fff8e1; /* Light yellow */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+main ul {
+    color: #2e7d32; /* Forest green */
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #555;
+    background: #1565c0; /* Rich blue */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
