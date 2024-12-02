@@ -7,8 +7,8 @@
 }
 
 body {
-    background: linear-gradient(135deg, #ece9e6, #ffffff);
-    color: #333;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee); /* Subtle pastel gradient */
+    color: #444;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -24,23 +24,11 @@ header {
 header h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #444;
+    color: #556677;
     text-transform: uppercase;
     letter-spacing: 3px;
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientMove 4s infinite alternate;
-}
-
-/* Animation for header gradient text */
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+    position: relative;
+    z-index: 2;
 }
 
 /* Main Container */
@@ -57,30 +45,11 @@ header h1 {
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 25px 20px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 25px;
     position: relative;
     overflow: hidden;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -150%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(135deg, #ff8a00 0%, #e52e71 100%);
-    transition: all 0.5s ease-in-out;
-    transform: rotate(45deg);
-    opacity: 0.1;
-    z-index: 1;
-}
-
-.card:hover::before {
-    left: -50%;
-    opacity: 0.2;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
 }
 
 .card:hover {
@@ -88,38 +57,52 @@ header h1 {
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Section Titles */
 .card h2 {
     font-size: 1.8rem;
-    color: #444;
     font-weight: 600;
+    color: #445566;
     margin-bottom: 15px;
-    z-index: 2;
-    position: relative;
 }
 
 /* List Styles */
 .card ul {
     list-style: none;
     padding: 0;
-    z-index: 2;
-    position: relative;
 }
 
 .card ul li {
     font-size: 1rem;
-    color: #666;
+    color: #556677;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    justify-content: center;
+    text-align: left;
+    position: relative;
+    padding-left: 30px;
 }
 
+/* Custom Bullet Graphics */
 .card ul li::before {
-    content: "★";
-    color: #e52e71;
-    font-size: 1.2rem;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f9d5e5, #fad6a5); /* Pastel gradient */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover Effect for Bullet Points */
+.card ul li:hover::before {
+    background: linear-gradient(135deg, #92a8d1, #f7cac9); /* Slight color change on hover */
+}
+
+.card ul li:hover {
+    color: #334455;
+    font-weight: 500;
 }
 
 /* Responsive Design */
@@ -133,7 +116,7 @@ header h1 {
     }
 
     .card ul li {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 }
 
@@ -149,6 +132,10 @@ header h1 {
     .card h2 {
         font-size: 1.4rem;
     }
+
+    .card ul li {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -161,6 +148,6 @@ header h1 {
     }
 
     .card ul li {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 }
