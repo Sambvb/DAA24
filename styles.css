@@ -3,13 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: linear-gradient(120deg, #f0f4ff, #d6eaff);
-    padding: 30px;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
     color: #333;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,85 +18,108 @@ body {
 
 header {
     text-align: center;
-    margin-bottom: 30px;
-    width: 100%;
+    margin-bottom: 40px;
 }
 
 header h1 {
     font-size: 3rem;
-    font-weight: 600;
-    color: #003366;
-    letter-spacing: 2px;
+    font-weight: 700;
+    color: #444;
     text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 4s infinite alternate;
 }
 
-/* Main container */
+/* Animation for header gradient text */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Main Container */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
 }
 
 /* Card Styles */
 .card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff8a00 0%, #e52e71 100%);
+    transition: all 0.5s ease-in-out;
+    transform: rotate(45deg);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.card:hover::before {
+    left: -50%;
+    opacity: 0.2;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Section Titles */
 .card h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #444;
+    font-weight: 600;
     margin-bottom: 15px;
-    color: #0066cc;
-    font-weight: 500;
-    text-transform: capitalize;
+    z-index: 2;
+    position: relative;
 }
 
 /* List Styles */
 .card ul {
     list-style: none;
-}
-
-.card ul li {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 12px;
-    line-height: 1.5;
+    padding: 0;
+    z-index: 2;
     position: relative;
 }
 
+.card ul li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
 .card ul li::before {
-    content: "▶";
-    position: absolute;
-    left: -25px;
-    color: #0066cc;
+    content: "★";
+    color: #e52e71;
     font-size: 1.2rem;
-    top: 0;
-}
-
-/* Hover Effects for List Items */
-.card ul li:hover {
-    color: #003366;
-    font-weight: bold;
-}
-
-.card ul li:hover::before {
-    color: #ff9900;
 }
 
 /* Responsive Design */
@@ -106,7 +129,11 @@ header h1 {
     }
 
     .card h2 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+    }
+
+    .card ul li {
+        font-size: 0.9rem;
     }
 }
 
@@ -120,11 +147,7 @@ header h1 {
     }
 
     .card h2 {
-        font-size: 1.6rem;
-    }
-
-    .card ul li {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -134,10 +157,10 @@ header h1 {
     }
 
     .card h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .card ul li {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
