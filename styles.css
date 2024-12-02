@@ -1,153 +1,72 @@
-/* General Styles */
-* {
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: linear-gradient(135deg, #fdfbfb, #ebedee); /* Subtle pastel gradient */
-    color: #444;
-    padding: 40px 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #556677;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    position: relative;
-    z-index: 2;
-}
-
 /* Main Container */
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    width: 100%;
-    max-width: 1200px;
 }
 
 /* Card Styles */
 .card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effects */
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.card h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #445566;
-    margin-bottom: 15px;
-}
-
-/* List Styles */
-.card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.card ul li {
-    font-size: 1rem;
-    color: #556677;
+/* Title on Top of Card */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    position: relative;
-    padding-left: 30px;
+    color: #333333;
 }
 
-/* Custom Bullet Graphics */
-.card ul li::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #f9d5e5, #fad6a5); /* Pastel gradient */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+/* Content in Card */
+.card-content {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
 }
 
-/* Hover Effect for Bullet Points */
-.card ul li:hover::before {
-    background: linear-gradient(135deg, #92a8d1, #f7cac9); /* Slight color change on hover */
+/* Different Pastel Colors for Each Card */
+.card:nth-child(1) {
+    background-color: #ffeadb; /* Soft Peach */
 }
 
-.card ul li:hover {
-    color: #334455;
-    font-weight: 500;
+.card:nth-child(2) {
+    background-color: #dff6f0; /* Mint Green */
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    .card h2 {
-        font-size: 1.6rem;
-    }
-
-    .card ul li {
-        font-size: 0.95rem;
-    }
+.card:nth-child(3) {
+    background-color: #fff4e0; /* Pale Yellow */
 }
 
-@media (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .card h2 {
-        font-size: 1.4rem;
-    }
-
-    .card ul li {
-        font-size: 0.9rem;
-    }
+.card:nth-child(4) {
+    background-color: #f0e6fa; /* Lavender */
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    .card h2 {
-        font-size: 1.2rem;
-    }
-
-    .card ul li {
-        font-size: 0.85rem;
-    }
+.card:nth-child(5) {
+    background-color: #ffebf0; /* Pink Blush */
 }
